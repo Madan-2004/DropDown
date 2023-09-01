@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background-color: rgb(166, 97, 236);
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    width: 300px;
+}
+
+#select{
+    background-color: rgb(255, 255, 255, 0.2);
+    height: 50px;
+    width: 90%;
+    padding: 8px 10px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+#select:hover{
+    color: black;
+}
+
+#select p{
+    margin-top: 10px;
+}
+
+#arrow img{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
+}
+
+ul{
+    margin-top: 30px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul div{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    overflow-y: hidden;
+}
+
+ul div:hover{
+    color: black;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+ul div span{
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+}
+
+ul{
+    visibility: hidden;
+    animation: hide 1s linear forwards;
+    opacity: 1;
+}
+
+@keyframes hide{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.hide{
+    visibility: visible;
+    opacity: 0.1;
+    animation: anim 1s linear forwards;
+}
+
+@keyframes anim{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}

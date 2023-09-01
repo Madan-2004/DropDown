@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ceeca1f1f.js" crossorigin="anonymous"></script>
+    <title>DropDown</title>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div id="select">
+                <p id="text">Select Social Media</p><span id="arrow"><img src="arrow.png"></span>
+            </div>
+            <div id="icons">
+                <ul>
+                    <div>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <li><a href="#">Facebook</a></li>
+                    </div>
+                    <div>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                        <li><a href="#">Twitter</a></li>
+                    </div>
+                    <div>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <li><a href="#">Instagram</a></li>
+                    </div>
+                    <div>
+                        <span><i class="fa-brands fa-whatsapp"></i></span>
+                        <li><a href="#">Whatsapp</a></li>
+                    </div>
+                    <div>
+                        <span><i class="fa-brands fa-linkedin"></i></span>
+                        <li><a href="#">LinkedIn</a></li>
+                    </div>
+                    <div>
+                        <span><i class="fa-brands fa-snapchat"></i></span>
+                        <li><a href="#">Snapchat</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ul = document.querySelector("ul");
+        var select = document.getElementById("select");
+        var text = document.getElementById("text");
+        var icon = document.querySelectorAll("#icons ul div");
+        var arrow = document.querySelector("#arrow img");
+
+        select.onclick = function(){
+            ul.classList.toggle("hide");
+            arrow.classList.toggle("rotate");
+        }
+
+        for(var i=0; i<6; i++){
+            icon[i].onclick = function(){
+                text.innerHTML = this.textContent;
+                ul.classList.toggle("hide");
+                arrow.classList.toggle("rotate");
+            }
+        }
+    </script>
+</body>
+</html>
